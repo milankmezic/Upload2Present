@@ -8,6 +8,8 @@ A fully in-memory file-to-PowerPoint converter that runs on Streamlit Community 
 
 Upload files, organize them, and download your PowerPoint presentation instantly!
 
+**📺 Watch the demo**: [YouTube Tutorial](https://www.youtube.com/watch?v=WK1nl8ds2m4)
+
 ## Features
 
 - **In-Memory Processing**: All files stored in `st.session_state` only
