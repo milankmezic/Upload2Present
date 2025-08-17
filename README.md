@@ -15,7 +15,7 @@ Upload files, organize them, and download your PowerPoint presentation instantly
 - **Smart PowerPoint Generation**: 
   - Images become individual slides
   - Non-images listed on summary slide
-- **Download Options**: PPTX deck + optional ZIP of originals
+- **Download Options**: PPTX deck + PDF document + ZIP of originals
 - **Cloud-Ready**: Minimal dependencies, perfect for Streamlit Cloud
 
 ## Quick Deploy
@@ -54,7 +54,7 @@ streamlit run app.py
 1. **Upload Files**: Drag & drop multiple files of any type
 2. **Add to Batch**: Files are stored in memory with metadata
 3. **Build PPTX**: Images become slides, others get listed
-4. **Download**: Get your PowerPoint deck and/or ZIP of originals
+4. **Download**: Get your PowerPoint deck, PDF document, and/or ZIP of originals
 
 ## File Structure
 
@@ -70,6 +70,9 @@ u2p-streamlit-cloud/
 - `streamlit` - Web framework
 - `python-pptx` - PowerPoint generation
 - `Pillow` - Image processing
+- `PyMuPDF` - PDF processing
+- `exifread` - EXIF metadata extraction
+- `reportlab` - PDF generation
 
 ## Memory Considerations
 
