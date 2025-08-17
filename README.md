@@ -2,6 +2,12 @@
 
 A fully in-memory file-to-PowerPoint converter that runs on Streamlit Community Cloud. No disk writes, no cloud storage—everything stays in RAM.
 
+## 🚀 Live Demo
+
+**Test the app online**: [https://upload2present.streamlit.app/](https://upload2present.streamlit.app/)
+
+Upload files, organize them, and download your PowerPoint presentation instantly!
+
 ## Features
 
 - **In-Memory Processing**: All files stored in `st.session_state` only
@@ -71,6 +77,41 @@ Streamlit Cloud has memory limits (~1GB). For large batches:
 - Monitor file sizes in the UI
 - Consider breaking into smaller batches
 - Files are automatically cleared when you start a new batch
+
+## 🔒 Security Features
+
+### Data Privacy & Security
+- **In-Memory Only**: All files are stored exclusively in Streamlit's session state (RAM)
+- **No Persistent Storage**: Files are never written to disk or cloud storage
+- **Automatic Cleanup**: Data is automatically cleared when:
+  - Starting a new batch
+  - Refreshing the browser
+  - Closing the browser tab
+  - Session timeout (typically 30 minutes)
+
+### File Processing Security
+- **No File System Access**: The app cannot read from or write to your local file system
+- **Isolated Processing**: Each file is processed in memory without external dependencies
+- **No Network Transfers**: Files are not sent to external services or APIs
+- **Metadata Extraction**: Only basic file metadata and EXIF data (for images) are extracted
+
+### Privacy Protection
+- **No Logging**: File contents are not logged or stored anywhere
+- **No Analytics**: No tracking of uploaded files or user behavior
+- **Session Isolation**: Each browser session is completely isolated
+- **No Cross-Session Data**: Files from one session cannot be accessed from another
+
+### Limitations & Considerations
+- **Public Deployment**: The live demo is publicly accessible - don't upload sensitive documents
+- **Memory Limits**: Large files may cause memory issues or app crashes
+- **Session Timeout**: Files will be lost if the session expires
+- **Browser Security**: Relies on browser security for file upload handling
+
+### Best Practices
+- **Test with Non-Sensitive Files**: Use sample documents for testing
+- **Monitor File Sizes**: Keep individual files under 50MB for best performance
+- **Use Local Deployment**: For sensitive documents, deploy locally or on private infrastructure
+- **Clear Browser Data**: Clear browser cache/cookies after use if concerned about privacy
 
 ## License
 
